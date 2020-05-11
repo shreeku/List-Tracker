@@ -1,0 +1,17 @@
+.todo-item-container {
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #deeaee;
+}
+.completed-button {
+  margin: 1rem;
+  border: 1px;
+  background-color: #82b74b;
+  color: #3e4444;
+}
+.remove-button {
+  margin: 1rem;
+  border: 1px;
+  background-color: #c94c4c;
+  color: #222222;
+}
