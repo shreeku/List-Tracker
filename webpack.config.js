@@ -28,7 +28,10 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: process.env.DEV_PORT,
-    publicPath: process.env.DEV_URL
+    publicPath: process.env.DEV_APP_URL
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+  node: {
+    fs: 'empty'
+  }
 }
