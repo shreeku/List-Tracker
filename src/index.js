@@ -6,19 +6,16 @@ import { Provider } from 'react-redux';
 import { configureStore } from './store';
 import App from './App.js';
 
-if(module.hot){
-  module.hot.accept()
-}
-
 const store = configureStore();
 const persistor = persistStore(store);
 
 ReactDOM.render(
-  <Provider store={store} >
-    <PersistGate persistor={persistor}
-                 loading={<div>Loading ...</div>}>
-                 <App />
-    </PersistGate>
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={store}>
+        <PersistGate
+            loading={<div>Loading...</div>}
+            persistor={persistor}>
+            <App />
+        </PersistGate>
+    </Provider>,
+    document.getElementById('root'),
 );
